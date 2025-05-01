@@ -1,0 +1,7 @@
+/NEP2020/2023/BCA/4thsem/Python-Programming/lab/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/assets/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
