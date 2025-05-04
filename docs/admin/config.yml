@@ -1,18 +1,18 @@
-# admin/config.yml
 backend:
   name: git-gateway
-  repo: 123-4sachi/nios-super
-  branch: master
+  branch: main # Or your main branch name (e.g., master)
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: static/img # Folder where uploaded images will be stored
+public_folder: /img # The public path to the media folder
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{slug}}"
+  - name: blog
+    label: Blog Posts
+    folder: content/blog # Folder where your blog post Markdown files are located
+    create: true # Allow users to create new blog posts
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
