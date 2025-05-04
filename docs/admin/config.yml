@@ -1,14 +1,14 @@
 backend:
   name: git-gateway
-  branch: main # Or your main branch name (e.g., master)
+  branch: master # Or your main branch name (e.g., master)
 
-media_folder: static/img # Folder where uploaded images will be stored
-public_folder: /img # The public path to the media folder
+media_folder: docs/wiki/assets # Folder where uploaded images will be stored
+public_folder:  docs/wiki/assets # The public path to the media folder
 
 collections:
   - name: blog
     label: Blog Posts
-    folder: content/blog # Folder where your blog post Markdown files are located
+    folder: docs/wiki # Folder where your blog post Markdown files are located
     create: true # Allow users to create new blog posts
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template
     fields:
