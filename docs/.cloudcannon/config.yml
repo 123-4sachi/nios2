@@ -1,0 +1,16 @@
+static_site_generator: custom
+
+source: ""
+
+build:
+  install: npm install
+  command: npm run docs:build
+  output: docs/.vitepress/dist
+
+collections:
+  docs:
+    output: true
+    folder: docs
+    label: Documentation
+    editor:
+      type: markdown
