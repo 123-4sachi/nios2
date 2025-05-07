@@ -1,16 +1,14 @@
 static_site_generator: custom
 
-source: ""
-
 build:
   install: npm install
   command: npm run docs:build
   output: docs/.vitepress/dist
 
 collections:
-  docs:
+  wiki:
     output: true
-    folder: docs
-    label: Documentation
+    folder: docs/wiki
+    label: Wiki
     editor:
       type: markdown
